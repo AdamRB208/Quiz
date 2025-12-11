@@ -33,3 +33,8 @@ questions = [
     'answer' : 'B'
   }
 ]
+
+for question in questions:
+  print(f"Question \n {question['question']}")
+  for option in question['options']:
+    print(f"Option {option}")
