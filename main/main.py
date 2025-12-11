@@ -38,3 +38,6 @@ for question in questions:
   print(f"Question \n {question['question']}")
   for option in question['options']:
     print(f"Option {option}")
+  users_input = input('A, B, C, D')
+  print(f"users input {users_input}")
+  print(f"correct answer {question['answer']}")
