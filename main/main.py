@@ -38,6 +38,20 @@ for question in questions:
   print(f"Question \n {question['question']}")
   for option in question['options']:
     print(f"Option {option}")
-  users_input = input('A, B, C, D')
-  print(f"users input {users_input}")
+  users_input = input('A, B, C or D?  ').capitalize()
+  print(f"users input {users_input.capitalize()}")
   print(f"correct answer {question['answer']}")
+
+  if users_input.capitalize() == question['answer']:
+    print(f"Good Job!!!")
+    score += 1
+    print(f"Your score is: {score}")
+  else:
+    print(f"You Suck!!!")
+
+if score == len(questions):
+  print(f"Great Job! You got all of the questions correct!")
+elif score == len(questions) // 2:
+  print(f"Nice try you got at least half of the questions correct!")
+else:
+  print(f"Nice try, keep practicing and try again!")
